@@ -325,6 +325,11 @@ body {
   display: inline-block;
 }
 
+#app #contentside #header .search-box {
+  position: relative;
+  top: 5px;
+}
+
 #app #contentside #header #header-navigation {
   position: relative;
   top: -12px;
@@ -381,7 +386,7 @@ body {
 #app #intros .card-body .stat-icon {
   position: absolute;
   border-radius: 10px;
-  right: 0;
+  right: 35px;
   top: 40px;
   width: 40px;
   height: 40px;
@@ -437,5 +442,20 @@ body {
 
 #app #intros .card-body .stat .stat-success {
   color: #5fd0a5;
+}
+
+@media screen and (min-width: 1300px) {
+  #app #intros .card-body:nth-child(1), #app #intros .card-body:nth-child(2) {
+    border-right: 2px solid #ededf1 !important;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  #app #intros {
+    display: block;
+  }
+  #app #intros .card-body, #app #intros .card-body:nth-child(1) {
+    border-right: none;
+  }
 }
 /*# sourceMappingURL=theme.css.map */

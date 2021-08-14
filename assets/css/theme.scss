@@ -271,6 +271,10 @@ body{
             .dropdown{
                 display: inline-block;
             }
+            .search-box{
+                position: relative;
+                top: 5px;
+            }
             #header-navigation{
                 position: relative;
                 top: -12px;
@@ -304,7 +308,6 @@ body{
         display: flex;
         align-items: flex-start;
         justify-content: flex-start;
-        
         .card-body{
             position: relative;
             padding: 25px 35px;
@@ -312,7 +315,7 @@ body{
             .stat-icon {
                 position: absolute;
                 border-radius: 10px;
-                right: 0;
+                right: 35px;
                 top: 40px;
                 width: 40px;
                 height: 40px;
@@ -355,6 +358,17 @@ body{
                 .stat-success{
                     color: #5fd0a5;
                 }
+            }
+            @media screen and (min-width: 1300px) {
+                &:nth-child(1), &:nth-child(2){
+                    border-right: 2px solid #ededf1!important;
+                }
+            }
+        }
+        @media screen and (max-width: 1300px) {
+            display: block;
+            .card-body, .card-body:nth-child(1){
+                border-right: none;
             }
         }
     }
