@@ -286,6 +286,11 @@ body{
                 }
             }
         }
+         @media screen and (min-width: 660px){
+            #close-menu-button{
+                display: none;
+            }
+        }
         &.opened{
             right: 0;
             left: 0;
@@ -390,6 +395,11 @@ body{
                         border-radius: 50px;
                         display: block;
                     }
+                }
+            }
+            @media screen and (min-width: 660px){
+                .search-box-mb{
+                    display: none;
                 }
             }
             #header-navigation{

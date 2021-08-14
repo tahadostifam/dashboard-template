@@ -350,6 +350,12 @@ body {
           transform: rotate(-45deg);
 }
 
+@media screen and (min-width: 660px) {
+  #app #sidebar #close-menu-button {
+    display: none;
+  }
+}
+
 #app #sidebar.opened {
   right: 0;
   left: 0;
@@ -467,6 +473,12 @@ body {
     background-color: #7d7d83;
     border-radius: 50px;
     display: block;
+  }
+}
+
+@media screen and (min-width: 660px) {
+  #app #contentside #header .search-box-mb {
+    display: none;
   }
 }
 
