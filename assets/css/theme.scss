@@ -510,4 +510,55 @@ body{
             }
         }
     }
+    .shadow-box{
+        background: #fff;
+        box-shadow: 0 0 1.25rem rgba(31, 45, 61, 0.1);
+        padding: 10px;
+        border-radius: 10px;
+        margin: 15px 0;
+        img{
+            width: 100%;
+            border-radius: 10px;
+        }
+    }
+    .tab-changer{
+        width: -100%;
+        .tabs{
+            width: 100%;
+            display: block;
+            .btn{
+                display: inline-block;
+                text-transform: uppercase;
+                font-weight: 700;
+                font-size: 13px;
+            }
+        }
+        .split{
+            display: flex;
+            align-items: flex-start;
+            .item{
+                padding-top: 20px;
+                flex: 1 0;
+                .small{
+                    display: block;
+                    margin-bottom: 20px;
+                    color: #7d7d83;
+                    opacity: 1;
+                    font-weight: 400;
+                    font-size: 14px;
+                    font-family: $global-font-family;
+                }
+                .value{
+                    font-size: 26px;
+                    color: #474747;
+                }
+            }
+        }
+    }
+    #analytics-1{
+        display: grid;
+        grid-template-columns: 450px auto;
+        grid-column-gap: 25px;
+        margin-top: 40px;
+    }
 }
