@@ -200,6 +200,9 @@ body{
         padding: 40px 0;
         box-shadow: 0 0 1.25rem rgba(31, 45, 61, 0.06);
         z-index: 10;
+        background-color: #fff;
+        display: block;
+        transition: all 0.5s cubic-bezier(1, 1, 0.22, 1);
         #brand{
             color: $theme-color;
             font-size: 22px;
@@ -253,7 +256,42 @@ body{
             }
         }
         @media screen and (max-width: 1100px){
-            display: none;
+            left: -105%;
+        }
+        #close-menu-button{
+            position: absolute;
+            right: 0;
+            top: 9px;
+            width: 40px;
+            height: 40px;
+            display: block;
+            border-radius: 7px;
+            padding: 9px 5px;
+            cursor: pointer;
+            span{
+                position: relative;
+                width: 100%;
+                height: 4px;
+                margin: 5px 0;
+                background-color: #7d7d83;
+                border-radius: 50px;
+                display: block;
+                &:nth-child(1){
+                    top: 5px;
+                    transform: rotate(45deg);
+                }
+                &:nth-child(2){
+                    top: -4px;
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+        &.opened{
+            right: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 90;
         }
     }
     #contentside{
@@ -279,6 +317,47 @@ body{
             .search-box{
                 position: relative;
                 top: 5px;
+            }
+            .search-box-mb{
+                position: relative;
+                padding: 10px;
+                font-size: 25px;
+                top: 1px;
+                right: -15px;
+                color: #7d7d83;
+                cursor: pointer;
+                .content{
+                    position: fixed;
+                    right: 0;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: $header-height;
+                    background-color: #fff;
+                    top: calc(#{$header-height} - #{$header-height} - #{$header-height});
+                    transition: 0.3s all ease;
+                    .input{
+                        width: 100%;
+                        height: $header-height;
+                        background: transparent;
+                        border-radius: 0;
+                        border-left: none;
+                        border-right: none;
+                        border-top: none;
+                    }
+                    #close-search-box-mb-button{
+                        position: absolute;
+                        font-size: 28px;
+                        z-index: 90;
+                        top: 10px;
+                        right: 10px;
+                        padding: 10px;
+                        height: 48px;
+                    }
+                }
+                &.opened .content{
+                    top: 0;
+                }
             }
             #menu-button{
                 display: none;
@@ -310,7 +389,6 @@ body{
                         background-color: #7d7d83;
                         border-radius: 50px;
                         display: block;
-                        transition: all 0.3s ease-in-out;
                     }
                 }
             }

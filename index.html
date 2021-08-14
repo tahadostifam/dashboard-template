@@ -11,43 +11,47 @@
     <div id="app">
         <div id="sidebar">
             <div id="sidebar-content">
-                <a href="/">
+                <a href="#">
                     <h1 id="brand">Dashboard</h1>
                 </a>
+                <div id="close-menu-button">
+                    <span></span>
+                    <span></span>
+                </div>
                 <nav id="sidebar-navigation">
                     <div class="ditem">
                         <span class="small">APPS</span>
-                        <a class="item active" href="/">
+                        <a class="item active" href="#">
                             <div class="icon">
                                 <ion-icon name="albums-outline"></ion-icon>
                             </div>
                             Dashboard
                         </a>
-                        <a class="item" href="/">
+                        <a class="item" href="#">
                             <div class="icon">
                                 <ion-icon name="mail-outline"></ion-icon>
                             </div>
                             Mailbox
                         </a>
-                        <a class="item" href="/">
+                        <a class="item" href="#">
                             <div class="icon">
                                 <ion-icon name="person-outline"></ion-icon>
                             </div>
                             Profile
                         </a>
-                        <a class="item" href="/">
+                        <a class="item" href="#">
                             <div class="icon">
                                 <ion-icon name="cloudy-outline"></ion-icon>
                             </div>
                             File Manager
                         </a>
-                        <a class="item" href="/">
+                        <a class="item" href="#">
                             <div class="icon">
                                 <ion-icon name="calendar-outline"></ion-icon>
                             </div>
                             Calendar
                         </a>
-                        <a class="item" href="/">
+                        <a class="item" href="#">
                             <div class="icon">
                                 <ion-icon name="albums-outline"></ion-icon>
                             </div>
@@ -82,14 +86,14 @@
                             </div>
                         </div>
                         <div class="dropdown-content">
-                            <a href="/" class="item">
+                            <a href="#" class="item">
                                 Setting & Privacy
                             </a>
-                            <a href="/" class="item">
+                            <a href="#" class="item">
                                 Switch Account
                             </a>
                             <div class="divider"></div>
-                            <a href="/" class="item">
+                            <a href="#" class="item">
                                 Log out
                             </a>
                         </div>
@@ -105,8 +109,21 @@
                 <div class="right centered-vertically">
                     <div class="search-box">
                         <form action="/">
-                            <input type="text" placeholder="Search..." class="input" name="search">
+                            <input type="text" placeholder="Search Something..." class="input" name="search">
                         </form>
+                    </div>
+                    <div class="search-box-mb">
+                        <div class="icon">
+                            <ion-icon name="search-outline"></ion-icon>
+                        </div>
+                        <div class="content">
+                            <form action="/">
+                                <input maxlength="61" type="text" placeholder="Search Something..." class="input" name="search">
+                            </form>
+                            <div id="close-search-box-mb-button">
+                                <ion-icon name="close-outline"></ion-icon>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -114,14 +131,14 @@
                 <div style="height: 60px; display: block;">
                     <div class="left" style="padding-top: 23px;">
                         <div class="text">
-                            <a href="/" class="small colored">APPS</a>
+                            <a href="#" class="small colored">APPS</a>
                             <span class="slash-sep">/</span>
-                            <a href="/" class="small">Dashboard</a>
+                            <a href="#" class="small">Dashboard</a>
                         </div>
                     </div>
                     <div class="right" style="margin-top: 9px;">
                         <button class="btn btn-secondary">Settings</button>
-                        <a href="/" style="margin-left: 5px;">
+                        <a href="#" style="margin-left: 5px;">
                             <button class="btn btn-primary">Upgrade</button>
                         </a>
                     </div>
@@ -170,7 +187,6 @@
                             Total revenue for last 20 days
                         </p>
                     </div>
-                    
                 </div>
             </div>
         </div>

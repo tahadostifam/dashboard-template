@@ -240,6 +240,10 @@ body {
   -webkit-box-shadow: 0 0 1.25rem rgba(31, 45, 61, 0.06);
           box-shadow: 0 0 1.25rem rgba(31, 45, 61, 0.06);
   z-index: 10;
+  background-color: #fff;
+  display: block;
+  -webkit-transition: all 0.5s cubic-bezier(1, 1, 0.22, 1);
+  transition: all 0.5s cubic-bezier(1, 1, 0.22, 1);
 }
 
 #app #sidebar #brand {
@@ -308,8 +312,50 @@ body {
 
 @media screen and (max-width: 1100px) {
   #app #sidebar {
-    display: none;
+    left: -105%;
   }
+}
+
+#app #sidebar #close-menu-button {
+  position: absolute;
+  right: 0;
+  top: 9px;
+  width: 40px;
+  height: 40px;
+  display: block;
+  border-radius: 7px;
+  padding: 9px 5px;
+  cursor: pointer;
+}
+
+#app #sidebar #close-menu-button span {
+  position: relative;
+  width: 100%;
+  height: 4px;
+  margin: 5px 0;
+  background-color: #7d7d83;
+  border-radius: 50px;
+  display: block;
+}
+
+#app #sidebar #close-menu-button span:nth-child(1) {
+  top: 5px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+#app #sidebar #close-menu-button span:nth-child(2) {
+  top: -4px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+#app #sidebar.opened {
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 90;
 }
 
 #app #contentside {
@@ -339,6 +385,53 @@ body {
 #app #contentside #header .search-box {
   position: relative;
   top: 5px;
+}
+
+#app #contentside #header .search-box-mb {
+  position: relative;
+  padding: 10px;
+  font-size: 25px;
+  top: 1px;
+  right: -15px;
+  color: #7d7d83;
+  cursor: pointer;
+}
+
+#app #contentside #header .search-box-mb .content {
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  background-color: #fff;
+  top: calc(70px - 70px - 70px);
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+}
+
+#app #contentside #header .search-box-mb .content .input {
+  width: 100%;
+  height: 70px;
+  background: transparent;
+  border-radius: 0;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+}
+
+#app #contentside #header .search-box-mb .content #close-search-box-mb-button {
+  position: absolute;
+  font-size: 28px;
+  z-index: 90;
+  top: 10px;
+  right: 10px;
+  padding: 10px;
+  height: 48px;
+}
+
+#app #contentside #header .search-box-mb.opened .content {
+  top: 0;
 }
 
 #app #contentside #header #menu-button {
@@ -374,8 +467,6 @@ body {
     background-color: #7d7d83;
     border-radius: 50px;
     display: block;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
   }
 }
 
