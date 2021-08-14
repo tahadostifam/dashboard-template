@@ -102,6 +102,7 @@ body {
 }
 
 #app .btn {
+  position: relative;
   color: #7d7d83;
   font-weight: 500;
   font-size: 16px;
@@ -113,16 +114,43 @@ body {
   background: transparent;
   border-radius: 7px;
   cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 #app .btn.btn-secondary {
   background: #f4f4f5 !important;
 }
 
+#app .btn.btn-secondary:hover {
+  background: #e8e8e8 !important;
+  color: #7d7d83 !important;
+}
+
 #app .btn.btn-primary {
   background: -webkit-gradient(linear, left top, right top, color-stop(0, #55c3b7), color-stop(48%, #5fd0a5), to(#66da90));
   background: linear-gradient(90deg, #55c3b7 0, #5fd0a5 48%, #66da90 100%);
   color: #fff;
+}
+
+#app .input {
+  border: 2px solid transparent;
+  background: #ededf1;
+  color: #7d7d83;
+  height: 40px;
+  outline: none;
+  border-radius: 20px;
+  width: 250px;
+  padding: 0 15px;
+  font-family: "Lato";
+  font-weight: 700;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+#app .input:focus {
+  border-color: #5fd0a5;
+  background: #fff;
 }
 
 #app .right {
@@ -289,12 +317,125 @@ body {
   top: 32px;
   right: 0;
   left: 0;
-  padding: 32px 30px;
+  padding: 13px 30px;
   height: 70px;
+}
+
+#app #contentside #header .dropdown {
+  display: inline-block;
+}
+
+#app #contentside #header #header-navigation {
+  position: relative;
+  top: -12px;
+  display: inline-block;
+  height: 100%;
+  margin-left: 15px;
+}
+
+#app #contentside #header #header-navigation .nav-item {
+  display: inline-block;
+  padding: 2px 0;
+  margin: 0 3px;
+  cursor: pointer;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  color: #7d7d83;
+}
+
+#app #contentside #header #header-navigation .nav-item:hover {
+  color: #262633;
+}
+
+#app #contentside #header #header-navigation .nav-item .icon {
+  position: relative;
+  top: 2px;
+  font-size: 20px;
 }
 
 #app #contentside #body {
   width: 100%;
   margin-top: 90px;
+}
+
+#app #intros {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+#app #intros .card-body {
+  position: relative;
+  padding: 25px 35px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0;
+          flex: 1 0;
+}
+
+#app #intros .card-body .stat-icon {
+  position: absolute;
+  border-radius: 10px;
+  right: 0;
+  top: 40px;
+  width: 40px;
+  height: 40px;
+  background: #fcdcdc;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-right: 2px;
+  font-size: 23px;
+}
+
+#app #intros .card-body .stat-icon.danger {
+  color: #f05154;
+}
+
+#app #intros .card-body .stat-icon.success {
+  color: #5fd0a5;
+  background: #ddf0f1;
+}
+
+#app #intros .card-body .header {
+  font-size: 28px;
+  color: #6c757d;
+  line-height: 32px;
+  font-weight: 500;
+}
+
+#app #intros .card-body .des {
+  color: #6c757d;
+  line-height: 25px;
+  margin-top: 10px;
+  font-weight: 700;
+  font-size: 13px;
+  opacity: .6;
+}
+
+#app #intros .card-body .stat {
+  position: relative;
+  top: -5px;
+  font-size: 14px;
+  display: inline-block;
+}
+
+#app #intros .card-body .stat .stat-danger {
+  color: #f05154;
+}
+
+#app #intros .card-body .stat .stat-success {
+  color: #5fd0a5;
 }
 /*# sourceMappingURL=theme.css.map */

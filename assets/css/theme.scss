@@ -88,6 +88,7 @@ body{
         }
     }
     .btn{
+        position: relative;
         color: #7d7d83;
         font-weight: 500;
         font-size: 16px;
@@ -99,12 +100,34 @@ body{
         background: transparent;
         border-radius: 7px;
         cursor: pointer;
+        transition: all 0.3s ease-in-out;
         &.btn-secondary{
             background: #f4f4f5!important;
+            &:hover{
+                background: #e8e8e8!important;
+                color: #7d7d83!important;
+            }
         }
         &.btn-primary{
             background: $theme-color-grad;
             color: #fff;
+        }
+    }
+    .input{
+        border: 2px solid transparent;
+        background: #ededf1;
+        color: #7d7d83;
+        height: 40px;
+        outline: none;
+        border-radius: 20px;
+        width: 250px;
+        padding: 0 15px;
+        font-family: $global-font-family;
+        font-weight: 700;
+        transition: all 0.3s ease-in-out;
+        &:focus{
+            border-color: #5fd0a5;
+            background: #fff;
         }
     }
     .right{
@@ -243,12 +266,96 @@ body{
             top: $header-space-from-top;
             right: 0;
             left: 0;
-            padding: $header-space-from-top 30px;
+            padding: 13px 30px;
             height: $header-height;
+            .dropdown{
+                display: inline-block;
+            }
+            #header-navigation{
+                position: relative;
+                top: -12px;
+                display: inline-block;
+                height: 100%;
+                margin-left: 15px;
+                .nav-item{
+                    display: inline-block;
+                    padding: 2px 0;
+                    margin: 0 3px;
+                    cursor: pointer;
+                    transition: 0.3s ease-in-out;
+                    color: #7d7d83;
+                    &:hover{
+                        color: #262633;
+                    }
+                    .icon{
+                        position: relative;
+                        top: 2px;
+                        font-size: 20px;
+                    }
+                }
+            }
         }
         #body{
             width: 100%;
             margin-top: $body-space-from-top;
+        }
+    }
+    #intros{
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        
+        .card-body{
+            position: relative;
+            padding: 25px 35px;
+            flex: 1 0;
+            .stat-icon {
+                position: absolute;
+                border-radius: 10px;
+                right: 0;
+                top: 40px;
+                width: 40px;
+                height: 40px;
+                background: #fcdcdc;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding-right: 2px;
+                font-size: 23px;
+                &.danger{
+                    color: #f05154;
+                }
+                &.success{
+                    color: #5fd0a5;
+                    background: #ddf0f1;
+                }
+            }
+            .header{
+                font-size: 28px;
+                color: #6c757d;
+                line-height: 32px;
+                font-weight: 500;
+            }
+            .des{
+                color: #6c757d;
+                line-height: 25px;
+                margin-top: 10px;
+                font-weight: 700;
+                font-size: 13px;
+                opacity: .6;
+            }
+            .stat{
+                position: relative;
+                top: -5px;
+                font-size: 14px;
+                display: inline-block;
+                .stat-danger{
+                    color: #f05154;
+                }
+                .stat-success{
+                    color: #5fd0a5;
+                }
+            }
         }
     }
 }
