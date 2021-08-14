@@ -1,0 +1,300 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,100;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+body {
+  font-family: "Lato";
+  background-color: #fff;
+}
+
+#app a, #app a:hover {
+  text-decoration: none;
+  color: #000;
+}
+
+#app .small {
+  font-family: "Montserrat";
+  font-weight: 700;
+  color: #000;
+  opacity: .25;
+  font-size: 12px;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+#app .small.colored {
+  opacity: 1;
+  color: #5fd0a5;
+}
+
+#app .text {
+  color: #cfcfcf;
+  font-family: "Lato";
+  font-size: 13px;
+  font-weight: 700;
+}
+
+#app .slash-sep {
+  margin: 0 5px;
+}
+
+#app .centered-vertically {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#app .lazyImageLoader {
+  background-color: #ddd;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+#app .lazyImageLoader img {
+  opacity: 0;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+#app .lazyImageLoader img.loaded {
+  opacity: 1;
+}
+
+#app .avatar {
+  height: 45px;
+}
+
+#app .avatar img {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+}
+
+#app .avatar .text {
+  color: #7d7d83;
+  display: inline-block;
+  margin-left: 8px;
+  font-family: "Lato";
+  font-size: 13px;
+  font-weight: 700;
+}
+
+#app .avatar .text .bottom-arrow {
+  position: relative;
+  display: inline-block;
+  top: 3px;
+  margin-left: 2px;
+  font-size: 15px;
+}
+
+#app .btn {
+  color: #7d7d83;
+  font-weight: 500;
+  font-size: 16px;
+  font-family: "Lato";
+  padding: 9px 24px;
+  line-height: 1.5;
+  border: none;
+  outline: none;
+  background: transparent;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+#app .btn.btn-secondary {
+  background: #f4f4f5 !important;
+}
+
+#app .btn.btn-primary {
+  background: -webkit-gradient(linear, left top, right top, color-stop(0, #55c3b7), color-stop(48%, #5fd0a5), to(#66da90));
+  background: linear-gradient(90deg, #55c3b7 0, #5fd0a5 48%, #66da90 100%);
+  color: #fff;
+}
+
+#app .right {
+  float: right;
+  height: 100%;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  display: inline-block;
+}
+
+#app .left {
+  float: left;
+  height: 100%;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  display: inline-block;
+}
+
+#app .dropdown .dropdown-content {
+  position: absolute;
+  background-color: #fff;
+  -webkit-box-shadow: 0 10px 1.25rem rgba(31, 45, 61, 0.08);
+          box-shadow: 0 10px 1.25rem rgba(31, 45, 61, 0.08);
+  border-radius: 10px;
+  margin-top: 15px;
+  min-width: 170px;
+  padding: 15px 20px;
+  z-index: 30;
+  display: none;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+#app .dropdown .dropdown-content::before {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 50px;
+  content: '';
+  display: block;
+  top: -20px;
+  left: 0;
+  right: 0;
+}
+
+#app .dropdown .dropdown-content .divider {
+  width: 100%;
+  height: 0;
+  margin: 10px 0;
+  border-top: 1px solid #ddd;
+}
+
+#app .dropdown .dropdown-content .item {
+  display: block;
+  width: 100%;
+  padding: 10px 0;
+  color: rgba(125, 125, 131, 0.8);
+  font-weight: 700;
+  font-size: 13px;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+#app .dropdown .dropdown-content .item:hover {
+  color: #5fd0a5;
+}
+
+#app .dropdown:hover .dropdown-content {
+  display: block;
+}
+
+#app #sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 300px;
+  height: 100vh;
+  padding: 40px 0;
+  -webkit-box-shadow: 0 0 1.25rem rgba(31, 45, 61, 0.06);
+          box-shadow: 0 0 1.25rem rgba(31, 45, 61, 0.06);
+  z-index: 10;
+}
+
+#app #sidebar #brand {
+  color: #5fd0a5;
+  font-size: 22px;
+  font-weight: 700;
+  font-family: "Montserrat";
+  padding: 12px 15px;
+}
+
+#app #sidebar #sidebar-content {
+  position: relative;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  width: 75%;
+}
+
+#app #sidebar #sidebar-navigation {
+  margin-top: 50px;
+}
+
+#app #sidebar #sidebar-navigation .ditem {
+  display: block;
+  width: 100%;
+}
+
+#app #sidebar #sidebar-navigation .ditem .small {
+  padding: 12px 15px;
+}
+
+#app #sidebar #sidebar-navigation .ditem .icon {
+  position: absolute;
+  display: inline-block;
+  font-size: 20px;
+  left: 16px;
+  font-size: 24px;
+  top: 11px;
+}
+
+#app #sidebar #sidebar-navigation .ditem .item {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 14px 0;
+  padding-left: 50px;
+  margin: 8px 0;
+  border-radius: 10px;
+  color: rgba(125, 125, 131, 0.8);
+  font-size: 13px;
+  font-weight: 900;
+  font-family: "Lato";
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+#app #sidebar #sidebar-navigation .ditem .item:hover {
+  color: #5fd0a5;
+}
+
+#app #sidebar #sidebar-navigation .ditem .item.active, #app #sidebar #sidebar-navigation .ditem .item.active:hover {
+  background: -webkit-gradient(linear, left top, right top, color-stop(0, #55c3b7), color-stop(48%, #5fd0a5), to(#66da90));
+  background: linear-gradient(90deg, #55c3b7 0, #5fd0a5 48%, #66da90 100%);
+  color: #fff;
+}
+
+#app #contentside {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 300px;
+  width: calc(100% - $side-bar-width);
+  min-height: 100vh;
+  padding: 32px;
+  background-color: #f8faf9;
+}
+
+#app #contentside #header {
+  position: absolute;
+  top: 32px;
+  right: 0;
+  left: 0;
+  padding: 32px 30px;
+  height: 70px;
+}
+
+#app #contentside #body {
+  width: 100%;
+  margin-top: 90px;
+}
+/*# sourceMappingURL=theme.css.map */
