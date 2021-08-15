@@ -617,5 +617,31 @@ body{
         grid-template-columns: 450px auto;
         grid-column-gap: 25px;
         margin-top: 40px;
+        @media screen and (max-width: 1400px) {
+            &{
+                grid-template-columns: auto;
+                grid-column-gap: 0;
+            }
+        }
+    }
+    .alert{
+        width: 100%;
+        padding: 20px 15px;
+        border-radius: 10px;
+        font-weight: 700;
+        font-size: 13px;
+        box-shadow: 0 0 1.25rem rgba(31, 45, 61, 0.1);
+        &.info{
+            color: #36a1ea;
+            background: #d5e9f7;
+        }
+    }
+    .footer{
+        margin-top: 20px;
+        .small{
+            font-weight: 600;
+            color: #474747;
+            opacity: .8;
+        }
     }
 }

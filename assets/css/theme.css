@@ -769,4 +769,37 @@ body {
   grid-column-gap: 25px;
   margin-top: 40px;
 }
+
+@media screen and (max-width: 1400px) {
+  #app #analytics-1 {
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+    grid-column-gap: 0;
+  }
+}
+
+#app .alert {
+  width: 100%;
+  padding: 20px 15px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 13px;
+  -webkit-box-shadow: 0 0 1.25rem rgba(31, 45, 61, 0.1);
+          box-shadow: 0 0 1.25rem rgba(31, 45, 61, 0.1);
+}
+
+#app .alert.info {
+  color: #36a1ea;
+  background: #d5e9f7;
+}
+
+#app .footer {
+  margin-top: 20px;
+}
+
+#app .footer .small {
+  font-weight: 600;
+  color: #474747;
+  opacity: .8;
+}
 /*# sourceMappingURL=theme.css.map */
