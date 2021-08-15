@@ -628,6 +628,45 @@ body {
   }
 }
 
+#app .product-item {
+  position: relative;
+  width: 100%;
+  display: block;
+  border-bottom: 1px solid #e8e8e8;
+  padding: 17px 0;
+}
+
+#app .product-item .title {
+  font-size: 12px;
+  color: #474747;
+  font-weight: 500;
+  margin-bottom: 5px;
+  font-family: "Montserrat";
+}
+
+#app .product-item .small {
+  font-size: 14px;
+  font-family: "Lato";
+  font-weight: 400;
+  color: #7d7d83;
+  opacity: 1;
+}
+
+#app .product-item .icon {
+  position: absolute;
+  right: 8px;
+  top: 27px;
+  font-size: 22px;
+}
+
+#app .product-item .icon.success {
+  color: #5fd0a5;
+}
+
+#app .product-item .icon.danger {
+  color: #f05154;
+}
+
 #app .shadow-box {
   background: #fff;
   -webkit-box-shadow: 0 0 1.25rem rgba(31, 45, 61, 0.1);
@@ -640,6 +679,39 @@ body {
 #app .shadow-box img {
   width: 100%;
   border-radius: 10px;
+}
+
+#app .shadow-box .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px;
+}
+
+#app .shadow-box .header .title {
+  font-size: 12px;
+  color: #5c6662;
+  font-family: "Montserrat";
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+#app .shadow-box .header .span {
+  opacity: .6;
+  color: #7d7d83;
+  text-transform: none;
+  font-size: 13px;
+}
+
+#app .shadow-box .content {
+  padding: 10px;
+}
+
+#app .shadow-box .product-item:last-child {
+  border-color: transparent;
 }
 
 #app .tab-changer {
